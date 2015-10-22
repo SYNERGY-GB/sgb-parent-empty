@@ -2,8 +2,25 @@
 'use strict';
 
 angular.module('sgb-parent-empty', ['megazord'])
-    .controller('sgb-parent-empty-controller', ['$scope', '_router', '_screen', '_screenParams', '$stateParams', function ($scope, _router, _screen, _screenParams, $stateParams) {
+    .controller('sgb-parent-empty-controller', ['$scope', '_router', '_screen', '_screenParams','$ionicLoading',
+    	function ($scope, _router, _screen, _screenParams, $ionicLoading) {
         _screen.initialize($scope, _screenParams);
+
+        $scope.$on('_dataLoadStarted', function(){
+        	$ionicLoading.show({
+        		template: '<ion-spinner icon="dots"></ion-spinner>',
+        		animation: 'fade-in',
+        		showBackdrop: true, 
+        		maxWidth: 500
+        	})
+        })
+
+
+        $scope.$on('_dataLoadFinished', function(){
+ 			$ionicLoading.hide(); 
+        })
+
+
 
         //Add your controller logic here.
     }]);
