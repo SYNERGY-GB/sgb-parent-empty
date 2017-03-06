@@ -18,6 +18,6 @@
   "homepage": "https://github.com/SYNERGY-GB/sgb-parent-empty",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "megazord-sdk": "git+ssh://git@github.com:SYNERGY-GB/megazord-sdk.git#1.0"
+    "megazord-sdk": "git+ssh://git@github.com:SYNERGY-GB/megazord-sdk.git#master"
   }
 }
